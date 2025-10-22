@@ -59,8 +59,9 @@ uint8_t getPixelValue(Image* srcImage,int x,int y,int bit,Matrix algorithm){
 void convolute(Image* srcImage,Image* destImage,Matrix algorithm){
     int row,pix,bit,span;
     span=srcImage->bpp*srcImage->bpp;
+
 // -------------
-    /* OpenMP modification */
+    /* OpenMP */
     #pragma omp parallel for collapse(2) schedule(static)
     for (row=0;row<srcImage->height;row++){
         for (pix=0;pix<srcImage->width;pix++){
@@ -70,6 +71,7 @@ void convolute(Image* srcImage,Image* destImage,Matrix algorithm){
         }
     }
 // -------------
+    
 }
 
 //Usage: Prints usage information for the program

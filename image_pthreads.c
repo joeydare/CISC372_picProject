@@ -90,6 +90,7 @@ void convolute(Image* srcImage,Image* destImage,Matrix algorithm){
     /* split rows over threads */
     int T=4;
     const char* env=getenv("THREADS");
+
     if (env && *env){ int n=atoi(env); if (n>0 && n<257) T=n; }
     pthread_t* th=(pthread_t*)malloc(sizeof(pthread_t)*T);
     WorkerArgs* args=(WorkerArgs*)malloc(sizeof(WorkerArgs)*T);
@@ -109,6 +110,7 @@ void convolute(Image* srcImage,Image* destImage,Matrix algorithm){
     free(args);
     free(th);
 // ---------------
+    
 }
 
 //Usage: Prints usage information for the program
