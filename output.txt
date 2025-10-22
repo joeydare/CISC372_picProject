@@ -1,0 +1,9 @@
+Script started on Wed Oct 22 17:49:25 2025
+]0;joeydare@r1n00.darwin:~/CISC372_picProject[?1034h[joeydare@r1n00 CISC372_picProject]$ srun ./image_pthreads pic1.jpg edge
+Took 3 seconds
+]0;joeydare@r1n00.darwin:~/CISC372_picProject[joeydare@r1n00 CISC372_picProject]$ srun ./image_omp pic1.jpg edge
+Took 3 seconds
+]0;joeydare@r1n00.darwin:~/CISC372_picProject[joeydare@r1n00 CISC372_picProject]$ exit
+exit
+
+Script done on Wed Oct 22 17:49:43 2025
